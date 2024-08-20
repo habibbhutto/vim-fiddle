@@ -29,10 +29,14 @@ call plug#begin('~/.config/nvim/.plugged')
               Plug 'petertriho/cmp-git'
 
   Plug 'mfussenegger/nvim-dap'
+  Plug 'microsoft/vscode-js-debug', { 'do': 'npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out' }
+  Plug 'mxsdev/nvim-dap-vscode-js'
+  Plug 'nvim-neotest/nvim-nio'
+  Plug 'rcarriga/nvim-dap-ui'
 
   " Tree-sitter
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
-      Plug 'nvim-treesitter/nvim-treesitter-refactor'
+    Plug 'nvim-treesitter/nvim-treesitter-refactor'
     " The following plugins are slow impacting editing experience 
     " Plug 'nvim-treesitter/nvim-treesitter-context'
     " Plug 'ziontee113/syntax-tree-surfer'

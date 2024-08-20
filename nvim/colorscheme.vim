@@ -72,7 +72,7 @@ let g:gruvbox_material_better_performance=1
 let g:gruvbox_material_disable_italic_comment=1
 let g:gruvbox_material_transparent_background=0
 
-colorscheme basic
+colorscheme gruvbox-material
 call OnColorSchemeChange()
 
 " DISABLE CUSTOM COLOR MARKERS

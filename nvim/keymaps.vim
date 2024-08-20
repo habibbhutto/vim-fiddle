@@ -1,5 +1,5 @@
 
-nnoremap <silent> <leader><leader> :nohlsearch<CR>
+nnoremap <silent> <leader><leader> :nohlsearch<bar>checktime<CR>
 
 " Telescope
 nnoremap <silent> <leader>tl :Telescope<cr>
@@ -41,10 +41,10 @@ nnoremap <silent> <M-S-m> [m
 nnoremap <silent> <M-m> ]m
 
 " Navigate lists
-nnoremap <silent> <C-n> :lnext<cr>
-nnoremap <silent> <C-p> :lprevious<cr>
-nnoremap <silent> [l :lfirst<cr>
-nnoremap <silent> ]l :llast<cr>
+nnoremap <silent> <C-n> :cn<cr>
+nnoremap <silent> <C-p> :cp<cr>
+nnoremap <silent> ]] :cn<cr>
+nnoremap <silent> [[ :cp<cr>
 
 nnoremap n nzz
 nnoremap N Nzz
@@ -119,4 +119,19 @@ inoremap <C-s> <cmd>w<cr>
 vmap RRC :!psql service=ContractProd -a -t -A<enter>
 vmap RRL :!psql service=LoyaltyProd -a -t -A<enter>
 vmap RRW :!psql service=WebshopProd -a -t -A<enter>
+vmap RRT :!psql service=test-cdm -a -t -A<enter>
+vmap RRTC :!psql service=test-contract -a <enter>
+vmap RRTL :!psql service=test-loyalty -a <enter>
+vmap RRTN :!psql service=test-newsletter -a <enter>
 vmap JJJ :!jq<enter>
+
+" noremap grt <cmd>bot term cd '%:h' && yarn test '%' 2>&1 <bar> tee %:t.log <CR>
+noremap grt <cmd>bot term cd '%:h' && yarn jest tests/%:t 2>&1 <bar> tee %:t.log <CR>
+noremap grtd <cmd>bot term cd '%:h' && yarn test:debug '%' 2>&1 <bar> tee %:t.log <CR>
+noremap <leader>ttl <cmd>e %.log<cr>
+noremap <leader>ttt <cmd>e %:p:h/tests/%:t:r.spec.ts<cr>
+noremap <leader>ttf <cmd>e %:p:h:h/%:t:r:r.ts<cr>
+
+
+noremap <leader>jjj :diffget //2 <bar> diffupdate<enter>
+noremap <leader>kkk :diffget //3 <bar> diffupdate<enter>
