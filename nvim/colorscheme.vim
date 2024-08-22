@@ -87,7 +87,7 @@ call OnColorSchemeChange()
 let g:neovide_theme = 'auto'
 let g:neovide_scale_factor=1.1
 
-let g:neovide_cursor_trail_size = 0.2
+let g:neovide_cursor_trail_size = 0.0
 let g:neovide_cursor_animation_length = 0.10
 let g:neovide_cursor_vfx_mode = ""
 
