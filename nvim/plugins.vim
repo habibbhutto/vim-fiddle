@@ -43,7 +43,7 @@ call plug#begin('~/.config/nvim/.plugged')
 
   Plug 'nvim-tree/nvim-tree.lua'
   " Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v3.x'}
-      Plug 'kyazdani42/nvim-web-devicons'
+      Plug 'nvim-tree/nvim-web-devicons'
   "    Plug 'MunifTanjim/nui.nvim'
   "    Plug 's1n7ax/nvim-window-picker'
 
